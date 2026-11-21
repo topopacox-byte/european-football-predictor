@@ -1,0 +1,36 @@
+EUROPEAN FOOTBALL PREDICTOR – MVP LOCAL 1.0
+
+QUÉ INCLUYE
+- Aplicación web progresiva (PWA) con diseño adaptable a móvil.
+- Pronóstico 1-X-2 mediante Elo inicial + distribución Poisson.
+- Ranking inicial de 24 clubes.
+- Registro manual de resultados y pronósticos.
+- Datos almacenados en el propio dispositivo (localStorage).
+- Exportación e importación de copia JSON.
+- Service Worker para conservar la aplicación y abrirla sin conexión después de la primera carga.
+
+IMPORTANTE SOBRE LA INSTALACIÓN
+Este paquete es una PWA, no un APK compilado. Android/Chrome solo permite instalar una PWA completa con Service Worker desde una dirección HTTPS (o localhost). No basta con abrir index.html directamente desde el ZIP.
+
+FORMA GRATUITA DE PROBARLA
+1. Descomprime la carpeta efp_app.
+2. Publica su contenido en un alojamiento estático HTTPS gratuito, por ejemplo GitHub Pages. No hace falta contratar un servidor backend ni mantener un ordenador encendido.
+3. Abre la dirección HTTPS desde Chrome en Android.
+4. Usa el menú de Chrome > «Instalar aplicación» o «Añadir a pantalla de inicio».
+5. Abre la app una vez con conexión. Después, la caché permitirá volver a abrir la interfaz sin conexión.
+
+LIMITACIONES DE ESTA VERSIÓN
+- Los ratings ELO de los clubes son valores iniciales ilustrativos, no una clasificación histórica validada.
+- No contiene aún las 50 temporadas ni resultados oficiales descargados.
+- Los resultados se introducen manualmente.
+- No sincroniza automáticamente ni actualiza datos desde Internet.
+- Los porcentajes son experimentales y no deben interpretarse como predicciones fiables hasta entrenar y validar el modelo con datos históricos.
+
+ARCHIVOS
+- index.html: interfaz.
+- app.js: modelo local, cálculos y almacenamiento.
+- manifest.webmanifest: metadatos de instalación.
+- sw.js: caché offline.
+- icons/: iconos de aplicación.
+
+Este paquete no contiene credenciales, claves API ni conexión a servicios externos.
